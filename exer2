@@ -1,1 +1,58 @@
+programa
+{
 
+    //Autor: Giulia Cangueiro
+    //Data: 12/04/23
+    
+    	inclua biblioteca Tipos --> tp
+	
+	
+	funcao inicio()
+	{
+   
+	     //quilometragemI representa quilometragem inicial
+          //quilometragemF representa quilometragem final
+          //quilometrageml represneta quilometragem por litros
+          //quilometragemT represneta quilometragem toral
+          //litrosU representa os litros usados
+          
+	     cadeia quilometragemi, quilometragemf
+	     cadeia litrosu
+	     real quilometrageml, quilometragemt 
+	    
+		escreva("Por favor, digita o Km que consta no seu vilocimetro para sair de viagem: ")
+		leia(quilometragemi)
+		enquanto (tp.cadeia_e_inteiro(quilometragemi, 10) != verdadeiro e tp.cadeia_e_real(quilometragemi) != verdadeiro ou tp.cadeia_para_real(quilometragemi) <= 0){
+		
+		escreva("Por favor, somentes valores válido\n")
+		escreva("Por favor, digita o Km que consta no seu vilocimetro para sair de viagem: ")
+		leia(quilometragemi)
+		}
+		
+		escreva("Por favor, agora digite o litros de galosina que foram abastecidos: ")
+          leia(litrosu)
+          enquanto (tp.cadeia_e_inteiro(litrosu, 10) != verdadeiro e tp.cadeia_e_real(litrosu) != verdadeiro ou tp.cadeia_para_real(litrosu) <= 0){
+          	
+		escreva("Por favor, somentes valores válido\n")
+		escreva("Por favor, agora digite o litros de galosina que foram abastecidos: ")
+		leia(litrosu)
+		}
+		
+		escreva("Por favor, agora digite o Km que consta ao chegar: ")
+          leia(quilometragemf)
+          enquanto (tp.cadeia_e_inteiro(quilometragemf, 10) != verdadeiro e tp.cadeia_e_real(quilometragemf) != verdadeiro ou tp.cadeia_para_real(quilometragemf) <= 0){
+          	
+		escreva("Por favor, somentes valores válido\n")
+		escreva("Por favor, agora digite o Km que consta ao chegar: ")
+		leia(quilometragemf)
+		}
+	
+	
+	     quilometragemt = tp.cadeia_para_real(quilometragemf) - tp.cadeia_para_real(quilometragemi)
+          quilometrageml = quilometragemt / tp.cadeia_para_real(litrosu)
+	     escreva("\nResultados:")
+	     
+		escreva("Distancia Percorrida", quilometragemt, "km com", litrosu, "Litros usados de gasolina\n")
+		escreva("Quantidade de Combustível utilizado", quilometrageml,  "km/1.\n")
+	}
+}
