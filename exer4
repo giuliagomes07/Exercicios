@@ -1,1 +1,43 @@
+programa
+{
+     //Autor: Giulia Cangueiro
+     //Data: 13/04/23
+	inclua biblioteca Tipos --> tp
+	
+	funcao inicio()
+	{ 
+		//valorC representa valor do cheque
+		//saldoA representa o saldo atual
+		//saldoI represneta o saldo inicial
+          cadeia saldoi, valorc 
+          real saldoa  
 
+       escreva("Informe o valor do cheque: ")
+       leia(valorc)
+       enquanto (tp.cadeia_e_inteiro(valorc, 10) != verdadeiro e tp.cadeia_e_real(valorc) != verdadeiro){
+       
+       escreva("Somente valor válido\n")
+       escreva("Informe o valor do cheque: ")
+       leia(valorc)
+        }
+        
+       escreva("Informe o valor do saldo inicial: ")
+       leia(saldoi)
+	  enquanto (tp.cadeia_e_inteiro(saldoi, 10) != verdadeiro e tp.cadeia_e_real(saldoi) != verdadeiro){
+      
+       escreva("Somente valor válido\n")
+       escreva("Informe o valor do saldo inicial: ")
+       leia(saldoi)
+      }
+      
+      se (tp.cadeia_para_real(valorc) > tp.cadeia_para_real(saldoi)){
+      escreva("Que pena, seu Cheque não pode ser descontado,  seu saldo é insuficiente : ")
+      }
+      
+     senao{
+      saldoa = tp.cadeia_para_real(saldoi) - tp.cadeia_para_real(valorc)
+      escreva("Seu Cheque foi descontado, saldo atual é de!")
+      
+     }
+   }
+}
