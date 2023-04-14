@@ -1,1 +1,31 @@
+programa
+{
+    //Autor: Giulia Cangueiro
+    //Data: 11/4/23
 
+    inclua biblioteca Tipos --> tp
+
+    funcao inicio()
+    {
+         inteiro  bonus, salariof
+         cadeia quantidadev
+         real salariot
+
+        escreva("Escreva a quantidade de softwares vendidos : ")
+        leia(quantidadev)
+        enquanto (tp.cadeia_e_inteiro(quantidadev, 10) != verdadeiro){
+        limpa()
+        escreva("Somente valor válido\n")
+        escreva("Escreva a quantidade de sistemas vendidos: ")
+        leia(quantidadev)
+        } 
+
+        bonus = (tp.cadeia_para_inteiro(quantidadev, 10) * 50)
+        salariot = 500 + bonus
+        
+        
+        escreva("\nO sálario total é de : ", salariot)
+        escreva("\nO bonus é de : ", bonus)
+
+    }
+}
