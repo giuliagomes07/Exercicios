@@ -1,1 +1,45 @@
+programa
+{  
+      //Autor: Giulia Cangueiro
+      //Data: 13/4/23
+	
+    inclua biblioteca Tipos --> tp
 
+    funcao inicio()
+    {
+       
+          cadeia financiamento
+          cadeia salario 
+
+          
+       escreva("Escreva o seu salário: ")
+       leia(salario)
+       enquanto (tp.cadeia_e_inteiro(salario, 10) != verdadeiro e tp.cadeia_e_real(salario) != verdadeiro){
+     
+       escreva ("somentos valores válidos\n")
+       escreva("Escreva o seu salário: ")
+       leia(salario)
+       }
+       
+       escreva("Escreva o valor do financiamento pretendido: ")
+       leia(financiamento)
+       enquanto (tp.cadeia_e_inteiro(financiamento, 10) != verdadeiro e tp.cadeia_e_real(financiamento) != verdadeiro){
+      
+       escreva ("somentos valores válidos\n")
+       escreva("Escreva o valor do financiamento pretendido: ")
+       leia(financiamento)
+       }
+       
+
+       se (tp.cadeia_para_real(financiamento) <= tp.cadeia_para_real(salario) * 5){
+           escreva("Oba,Financiamento Concedido\n")
+       }
+
+       senao {
+        escreva("Que pena,seu Financiamento foi Negado")
+       }
+
+
+       escreva("\nObrigado por nos consultar.")
+    }
+}
